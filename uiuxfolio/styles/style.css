@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.navbar-brand,
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: #EE9322;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;      /* for sticky footer */
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  
+  font-weight: bold;
+  /* color: #EE9322; */
+}
+
+h2{
+  font-style: italic;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+/* Header nav link hover color */
+.nav-link:hover, .card-title {
+  color: #EE9322;
+}
+
+
+/* Main content pushes footer down */
+main {
+  flex: 1;
+  padding-top: 70px; /* space for sticky nav */
+}
+
+/* Footer styling (optional tweaks) */
+.footer {
+  background-color: #f8f9fa;
+  font-size: 0.9rem;
+}
+
+.custom-hover-shadow {
+  transition: box-shadow 0.2s ease;
+}
+
+.custom-hover-shadow:hover {
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
+}
