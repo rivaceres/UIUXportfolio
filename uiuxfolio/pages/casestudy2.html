@@ -2,11 +2,14 @@
   <!-- Top Row -->
   <div class="row align-items-center mb-5">
     <div class="col-md-5">
-      <a href="#" class="btn btn-outline-secondary mb-3 rounded-0 custom-hover-btn" onclick="location.reload()">← Back</a>
-      <h2 class="mt-4">Agrilakal –  </br>  from the farm, straight to the buyer</h2>
+      <a href="#" class="btn btn-outline-secondary mb-3 rounded-0 custom-hover-btn" onclick="location.reload()">←
+        Back</a>
+      <h2 class="mt-4">Agrilakal – </br> from the farm, straight to the buyer</h2>
       <p class="mt-5 mb-5">
-        A farmer-first marketplace. It <span class="text-highlight">connects Philippine growers, buyers, distributors and the government, from harvest listing to verified delivery and payment. </span> The name joins agrikultura (farming) and kalakal (goods, trade).
- 
+        A farmer-first marketplace. It <span class="text-highlight">connects Philippine growers, buyers, distributors
+          and the government, from harvest listing to verified delivery and payment. </span> The name joins agrikultura
+        (farming) and kalakal (goods, trade).
+
       </p>
     </div>
     <div class="col-md-7 text-center">
@@ -51,8 +54,13 @@
     </div>
     <div class="col-md-8">
       <p>
-        Filipino smallholder farmers often can’t <span class="text-highlight">find reliable buyers before harvest. Produce goes unsold or sells at low farmgate prices.</span> Institutional buyers struggle to find supply and coordinate purchases across locations. Price information is uneven, logistics are fragmented, and there is no trusted record of what was agreed, delivered or paid. </br></br>
-  How might we give verified farmers earlier visibility to buyers, fair reference-based pricing and coordinated delivery, in a flow simple enough for low-bandwidth phones and six local languages, so more of every harvest is sold and paid for?
+        Filipino smallholder farmers often can’t <span class="text-highlight">find reliable buyers before harvest.
+          Produce goes unsold or sells at low farmgate prices.</span> Institutional buyers struggle to find supply and
+        coordinate purchases across locations. Price information is uneven, logistics are fragmented, and there is no
+        trusted record of what was agreed, delivered or paid. </br></br>
+        How might we give verified farmers earlier visibility to buyers, fair reference-based pricing and coordinated
+        delivery, in a flow simple enough for low-bandwidth phones and six local languages, so more of every harvest is
+        sold and paid for?
       </p>
     </div>
   </div>
@@ -73,9 +81,13 @@
         <!-- Primary Users -->
         <div class="col-md-6">
           <h4>Primary Users</h4>
-          <p>Farmers - want to get verified, list harvests before picking, compare offers and get paid. They need simple step-by-step flows in their own language, low-bandwidth support, and LGU help when needed.</p>
-          <p>Buyers and wholesalers want to find crops by region, volume and date, and to negotiate and manage deliveries. They need verified sellers, a clear record of agreed terms, and a way to raise quality claims.</p>
-          <p>Distributors - want predictable jobs within their area and capacity, with clear pickup details and a way to report breakdowns.</p>
+          <p>Farmers - want to get verified, list harvests before picking, compare offers and get paid. They need simple
+            step-by-step flows in their own language, low-bandwidth support, and LGU help when needed.</p>
+          <p>Buyers and wholesalers want to find crops by region, volume and date, and to negotiate and manage
+            deliveries. They need verified sellers, a clear record of agreed terms, and a way to raise quality claims.
+          </p>
+          <p>Distributors - want predictable jobs within their area and capacity, with clear pickup details and a way to
+            report breakdowns.</p>
         </div>
 
         <!-- Secondary Users -->
@@ -99,15 +111,18 @@
       </h3>
     </div>
     <div class="col-md-8">
-      <p> I didn’t run primary user research for this project. I based the problem, users and flows on secondary research: published reports and articles on Philippine smallholder farming, farmgate pricing, post-harvest loss and agricultural logistics. Five root causes stood out:
-      </br></p>
-      <ol>
+      <p> I didn’t run primary user research for this project. I based the problem, users and flows on secondary
+        research: published reports and articles on Philippine smallholder farming, farmgate pricing, post-harvest loss
+        and agricultural logistics. Five root causes stood out:
+        </br></p>
+      <ul style="list-style-type:disc;">
         <li>Unsold harvests. Supply becomes visible to buyers too late, often only at or after harvest.</li>
         <li>Low farmgate prices. Farmers have weak negotiating power and few market channels.</li>
-        <li>Information asymmetry. There is no shared, approved price reference, so middlemen hold the market information.</li>
+        <li>Information asymmetry. There is no shared, approved price reference, so middlemen hold the market
+          information.</li>
         <li>Fragmented logistics. Transport is arranged ad hoc, and delivery status relies on trust, not evidence.</li>
         <li>Hard-to-find supply. Buyers can’t reliably locate volume across provinces.</li>
-      </ol>
+      </ul>
     </div>
   </div>
 
@@ -121,32 +136,62 @@
     </div>
     <div class="col-md-8">
       <p>
-        Farmers sell more of each harvest, earlier, at prices aligned to the regional reference, and know when they’ve been
+        Farmers sell more of each harvest, earlier, at prices aligned to the regional reference, and know when they’ve
+        been
         paid. </br></br>
-        Buyers find verified supply fast, lock terms in one structured offer, and receive what they ordered on time. </br></br>
+        Buyers find verified supply fast, lock terms in one structured offer, and receive what they ordered on time.
+        </br></br>
         Distributors get jobs that fit their area and capacity, with evidence that settles every handover. </br></br>
         DA and LGU onboard and assist farmers safely, with every sensitive action scoped and auditable.
       </p>
     </div>
-    </div>
+  </div>
 
-    
+
   <!-- Ideation ---------->
   <div class="row py-5 border-bottom align-items-start">
     <div class="col-md-4">
       <h3 class="mb-0">Ideation & Design Process</h3>
     </div>
     <div class="col-md-8">
+      <!-- Information Architecture ------------->
       <p>
-        The project began with establishing a clear <span class="text-highlight">information architecture</span> to define the structure and flow of content
+        The project began with establishing a clear <span class="text-highlight">information architecture</span> to
+        define the structure and flow of content
         across the platform. This helped outline key sections and ensure intuitive navigation.
       </p>
 
       <img src="assets/agriInfoArchitect.png" class="img-fluid mt-3" alt="Agrilakal Information Architecture">
 
-          <!-- Low-Fidelity Wireframes -->
+
+      <!-- User Flow ------------------->
       <p class="mt-4">
-        <span class="text-highlight">Low-fidelity wireframes</span> were created digitally to explore layout possibilities and content placement.
+        Every role enters through the same onboarding and shares global elements: search, language, notifications and
+        feedback states. After sign-in, each role lands on its own home, with navigation built around its main job.
+        </br></br>
+
+        Next, I mapped the end-to-end <span class="text-highlight">user flow</span>, from a farmer’s harvest to a
+        completed order, including key decision points involving farmers, buyers, the system, and distributors. This
+        helped establish two important rules: an order is only considered complete once both delivery and payment are
+        confirmed, and distributors cannot decline assigned jobs. Instead, they report any issues or exceptions so
+        dispatch can reassign the job.
+      </p>
+
+      <img src="assets/agriUserFlow.png" class="img-fluid mt-3" alt="Agrilakal User Flow">
+
+
+      <!-- Low-Fidelity Wireframes ---------------->
+      <p class="mt-4">
+        I then translated the key user journeys into <span class="text-highlight">low-fidelity wireframes</span> to
+        explore the initial layout, content structure, and navigation.
+      </p>
+
+      <img src="assets/agriLowfidelityWireframe.jpg" class="img-fluid mt-3" alt="Agrilakal Low-Fidelity Wireframe">
+
+
+      <!-- High-Fidelity Wireframes  ---------------->
+      <!-- <p class="mt-4">
+        From there, I moved into Figma to develop the <span class="text-highlight">high-fidelity UX designs</span>.
       </p>
 
       <div class="row text-center mt-3">
@@ -166,94 +211,119 @@
           <img src="assets/LF_TYW.png" class="img-fluid wireframe-img" alt="LF TKW">
           <div class="mt-2 small text-muted">Thank you</div>
         </div>
+      </div> -->
+
+      
+      <!-- FARMER -->
+      <div class="mb-4">
+        <h5 class="mb-3">Farmer</h5>
+        <div class="device-gallery">
+          <img src="assets/farmer-mobile.png"
+              class="device-mobile" alt="Farmer Mobile">
+          <img src="assets/farmer-tablet.png"
+              class="device-tablet" alt="Farmer Tablet">
+        </div>
       </div>
 
-    <!-- High-Fidelity Wireframes -->
-    <p class="mt-4">
-      <span class="text-highlight">High-fidelity wireframes</span> were then created to refine the visual hierarchy, branding, and usability.
-    </p>
+      <!-- BUYER -->
+      <div class="mb-4">
+        <h5 class="mb-3">Buyer</h5>
+        <div class="device-gallery">
+          <img src="assets/buyer-mobile.png"
+              class="device-mobile" alt="Buyer Mobile">
+          <img src="assets/buyer-tablet.png"
+              class="device-tablet" alt="Buyer Tablet">
+          <img src="assets/buyer-desktop.png"
+              class="device-desktop" alt="Buyer Desktop">
+        </div>
+      </div>
 
-    <div class="row text-center mt-3">
-      <div class="col-md-6 mb-3">
-        <img src="assets/HFOpt-in.png" class="img-fluid wireframe-img" alt="LFHome">
-        <div class="mt-2 small text-muted">Home</div>
+      <!-- DISTRIBUTOR -->
+      <div class="mb-4">
+        <h5 class="mb-3">Distributor</h5>
+        <div class="device-gallery">
+          <img src="assets/distributor-mobile.png"
+              class="device-mobile" alt="Distributor Mobile">
+          <img src="assets/distributor-tablet.png"
+              class="device-tablet" alt="Distributor Tablet">
+          <img src="assets/distributor-desktop.png"
+              class="device-desktop" alt="Distributor Desktop">
+        </div>
       </div>
-      <div class="col-md-6 mb-3">
-        <img src="assets/HFPopup.png" class="img-fluid wireframe-img" alt="LFContact">
-        <div class="mt-2 small text-muted">Contact</div>
-      </div>
-      <div class="col-md-6 mb-3">
-        <img src="assets/HFOTO.png" class="img-fluid wireframe-img" alt="LF OTOW">
-        <div class="mt-2 small text-muted">One Time Offer</div>
-      </div>
-      <div class="col-md-6 mb-3">
-        <img src="assets/HFTY.png" class="img-fluid wireframe-img" alt="LF TKW">
-        <div class="mt-2 small text-muted">Thank you</div>
-      </div>
+
+
+
+
+
+
+
+
+      <p class="mt-4">
+        This process helped me establish a clearer structure for the platform, ensuring that the screens and
+        interactions aligned with the overall user flow before moving into the final designs.
+      </p>
+
+      <p>
+        Detailed wireframes are accessible via the following link:<br>
+        <a href="https://www.figma.com/design/NNEwFnzYE7W9sjQ9rq78TE/AgriLakal?node-id=1-5&t=cLHXzgwMSvkw33v5-1"
+          target="_blank">View Full Wireframes</a>
+      </p>
+
     </div>
 
-    <p class="mt-4">
-      The design decisions were guided by best practices in UI/UX, focusing on <span class="text-highlight">clarity</span>, <span class="text-highlight">accessibility</span>, and <span class="text-highlight">user engagement</span>.
-    </p>
 
-    <p>
-      Detailed wireframes are accessible via the following link:<br>
-      <a href="https://www.figma.com/design/NNEwFnzYE7W9sjQ9rq78TE/AgriLakal?node-id=1-5&t=cLHXzgwMSvkw33v5-1" target="_blank">View Full Wireframes</a>
-    </p>
   </div>
 </div>
 
 
-  <!-- Final Designs ------------>
-  <div class="row py-5  align-items-start">
-    <div class="col-md-4">
-      <h3 class="mb-0">Final Designs</h3>
-    </div>
-    <div class="col-md-8">
-      I designed 96 screens across four roles and three breakpoints, each shaped around one main job. Farmers can list a harvest, answer an offer and see when they’ll be paid. Buyers can turn a need into a purchase request, accept an offer and record payment. Distributors get jobs automatically, prove every pickup and drop-off, and can report a problem without being penalised. DA and LGU officials can see prices, volumes and disputes across their area.
-    </div>
+<!-- Final Designs ------------>
+<div class="row py-5  align-items-start">
+  <div class="col-md-4">
+    <h3 class="mb-0">Final Designs</h3>
   </div>
+  <div class="col-md-8">
+    I designed 96 screens across four roles and three breakpoints, each shaped around one main job. Farmers can list a
+    harvest, answer an offer and see when they’ll be paid. Buyers can turn a need into a purchase request, accept an
+    offer and record payment. Distributors get jobs automatically, prove every pickup and drop-off, and can report a
+    problem without being penalised. DA and LGU officials can see prices, volumes and disputes across their area.
+  </div>
+</div>
 
-  <!-- Full-width Image (outside the above columns) -->
-  <div class="row mb-4">
-    <div class="col-12">
-      <img src="assets/App2MU.png" class="img-fluid w-100" alt="Final Design Full Preview">
-    </div>
+<!-- Full-width Image (outside the above columns) -->
+<div class="row mb-4">
+  <div class="col-12">
+    <img src="assets/agriFinalDesign.png" class="img-fluid w-100" alt="Agrilakal Final Design">
   </div>
-
-  <!-- Live Button -->
-  <div class="row border-bottom">
-    <div class="col-12 text-center">
-      <a href="https://rivaceres-jobs.systeme.io/nn-optin" 
-        class="btn custom-launch-btn rounded-0 mb-5" 
-        target="_blank">
-        Checkout Live Website! 🎉
-      </a>
-    </div>
-  </div>
+</div>
 
 
-  <!-- Impact ------->
-  <div class="row py-5 border-bottom align-items-start">
-    <div class="col-md-4">
-      <h3 class="mb-0">
-        Impact
-      </h3>
-    </div>
-    <div class="col-md-8">
-        This project produced a complete design package for Agrilakal: an information architecture, a user flow, wireframes, a design guide, a log of key design decisions, and high-fidelity screens for every role. The impact is still expected rather than measured. I see Agrilakal working best as a government-backed platform, run with the Department of Agriculture and LGUs. It could give smallholders a fairer route to market, publish reference prices people can trust, and cut unsold and wasted harvests. It would also give officials live data on supply, prices and disputes, so they can plan programs and respond faster. To show whether it works, I would track sell-through rate as the north star, alongside time to first qualified offer, on-time fulfilment, payment completion and dispute incidence, with targets set after a pilot baseline.
-    </div>
+<!-- Impact ------->
+<div class="row py-5 border-bottom align-items-start">
+  <div class="col-md-4">
+    <h3 class="mb-0">
+      Impact
+    </h3>
   </div>
+  <div class="col-md-8">
+    This project produced a complete design package for Agrilakal: an information architecture, a user flow, wireframes,
+    a design guide, a log of key design decisions, and high-fidelity screens for every role. The impact is still
+    expected rather than measured. I see Agrilakal working best as a government-backed platform, run with the Department
+    of Agriculture and LGUs. It could give smallholders a fairer route to market, publish reference prices people can
+    trust, and cut unsold and wasted harvests. It would also give officials live data on supply, prices and disputes, so
+    they can plan programs and respond faster. To show whether it works, I would track sell-through rate as the north
+    star, alongside time to first qualified offer, on-time fulfilment, payment completion and dispute incidence, with
+    targets set after a pilot baseline.
+  </div>
+</div>
 
 </div>
 
-<a href="#top" id="backToTopBtn" class="btn btn-sm rounded-circle" style="background-color: #EE9322; color: white; position: fixed; bottom: 20px; right: 20px; z-index: 1000; display: none;">
+<a href="#top" id="backToTopBtn" class="btn btn-sm rounded-circle"
+  style="background-color: #EE9322; color: white; position: fixed; bottom: 20px; right: 20px; z-index: 1000; display: none;">
   <!-- Bootstrap arrow up icon -->
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V4.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4-.007-.007a.498.498 0 0 0-.697.007l-4 4a.5.5 0 1 0 .708.708L7.5 4.707V11.5a.5.5 0 0 0 .5.5z"/>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
+    viewBox="0 0 16 16">
+    <path fill-rule="evenodd"
+      d="M8 12a.5.5 0 0 0 .5-.5V4.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4-.007-.007a.498.498 0 0 0-.697.007l-4 4a.5.5 0 1 0 .708.708L7.5 4.707V11.5a.5.5 0 0 0 .5.5z" />
   </svg>
 </a>
-
-
-
-

@@ -1,6 +1,6 @@
 .case-image {
   /* max-width: 800px; */
-    width: 100%;
+  width: 100%;
   max-width: 550px;
   height: auto;
 }
@@ -62,5 +62,36 @@ p {
 
 .text-highlight{
   color: #EE9322;
+}
+
+
+
+/* Low fidelity Wireframe - UX Designs */
+
+.device-gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+.device-gallery img {
+  display: block;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Device sizes */
+.device-mobile {
+  width: 16%;
+}
+
+.device-tablet {
+  width: 30%;
+}
+
+.device-desktop {
+  width: 46%;
 }
 
