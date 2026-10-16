@@ -71,3 +71,37 @@ main {
   object-fit: cover; /* This ensures images fill the space without distortion */
   object-position: center; /* Centers the image */
 }
+
+/* Skeleton loading placeholders */
+.skeleton {
+  background: linear-gradient(90deg, #ececec 25%, #f6f6f6 50%, #ececec 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.2s ease-in-out infinite;
+}
+
+div.skeleton { border-radius: 4px; }
+
+/* :where() keeps specificity at 0 so each image's own width/size classes still win */
+:where(img.skeleton:not([width])) {
+  width: 100%;
+  min-height: 240px;
+}
+
+.skeleton-brand   { width: 120px; height: 1.5rem; margin: 0.5rem 0; }
+.skeleton-nav     { width: 220px; height: 1rem; }
+.skeleton-footer  { width: 260px; height: 0.9rem; }
+.skeleton-btn     { width: 90px; height: 38px; }
+.skeleton-title   { height: 2.2rem; width: 85%; }
+.skeleton-heading { height: 1.75rem; width: 60%; }
+.skeleton-text    { height: 1rem; margin-bottom: 0.6rem; }
+.skeleton-icon    { width: 32px; height: 32px; border-radius: 50% !important; }
+.skeleton-hero    { width: 100%; max-width: 550px; aspect-ratio: 4 / 3; margin: 0 auto; }
+
+@keyframes skeleton-shimmer {
+  from { background-position: 200% 0; }
+  to   { background-position: -200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton { animation: none; }
+}
