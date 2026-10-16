@@ -37,6 +37,9 @@ p {
   line-height: 1.8;
 }
 
+
+
+
 /* IDEATION */
 .ideation-img {
   max-width: 100%;       /* Makes sure it doesn’t overflow */
@@ -44,6 +47,22 @@ p {
   display: block;        /* Removes inline spacing below image */
   margin-top: 1rem;
 }
+
+
+/* Initially show "See more" */
+.see-less-text {
+  display: none;
+}
+
+/* When expanded */
+.expand-toggle[aria-expanded="true"] .see-more-text {
+  display: none;
+}
+
+.expand-toggle[aria-expanded="true"] .see-less-text {
+  display: inline;
+}
+
 
 
 
@@ -63,6 +82,49 @@ p {
 
 .list-line li:last-child {
   margin-bottom: 0;
+}
+
+/* Expandable text button */
+.expand-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.expand-toggle:hover {
+  color: #EE9322;
+}
+
+.expand-toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+
+/* Chevron indicator */
+.expand-icon {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  margin-right: 4px;
+  position: relative;
+  top: -2px;
+}
+
+/* Expanded state */
+.expand-toggle[aria-expanded="true"] .expand-icon {
+  transform: rotate(225deg);
 }
 
 

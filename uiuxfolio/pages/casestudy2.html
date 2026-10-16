@@ -120,26 +120,37 @@
           and flows on secondary
           research:</span> published reports and articles on Philippine smallholder farming, farmgate pricing,
         post-harvest loss
-        and agricultural logistics. Five root causes stood out.
-        </br></p>
-      <ul class="list-line">
-        <li><span class="fw-semibold">Unsold harvests.</span> Supply becomes visible to buyers too late, often only at
-          or after harvest.</li>
-        <li><span class="fw-semibold">Low farmgate prices.</span> Farmers have weak negotiating power and few market
-          channels.</li>
-        <li><span class="fw-semibold">Information asymmetry.</span> There is no shared, approved price reference, so
-          middlemen hold the market
-          information.</li>
-        <li><span class="fw-semibold">Fragmented logistics.</span> Transport is arranged ad hoc, and delivery status
-          relies on trust, not evidence.</li>
-        <li><span class="fw-semibold">Hard-to-find supply.</span> Buyers can’t reliably locate volume across provinces.
-        </li>
-      </ul>
+        and agricultural logistics. 
+        <button class="expand-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#rootcauseList"
+          aria-expanded="false" aria-controls="rootcauseList">
+          Five root causes stood out.
+          <span class="expand-icon"></span>
+        </button>
+        </br>
+        </p>
+      
+      <!-- list expand -->
+      <div class="collapse" id="rootcauseList">
+        <ul class="list-line">
+          <li><span class="fw-semibold">Unsold harvests.</span> Supply becomes visible to buyers too late, often only at
+            or after harvest.</li>
+          <li><span class="fw-semibold">Low farmgate prices.</span> Farmers have weak negotiating power and few market
+            channels.</li>
+          <li><span class="fw-semibold">Information asymmetry.</span> There is no shared, approved price reference, so
+            middlemen hold the market
+            information.</li>
+          <li><span class="fw-semibold">Fragmented logistics.</span> Transport is arranged ad hoc, and delivery status
+            relies on trust, not evidence.</li>
+          <li><span class="fw-semibold">Hard-to-find supply.</span> Buyers can’t reliably locate volume across provinces.
+          </li>
+        </ul>
+      </div>
+
     </div>
   </div>
 
 
-  <!-- Goal ------------->
+  <!-- Goal --------------------------------->
   <div class="row py-5 border-bottom align-items-start">
     <div class="col-md-4">
       <h3 class="mb-0">
@@ -164,7 +175,7 @@
   </div>
 
 
-  <!-- Ideation ---------->
+  <!-- Ideation ------------------------------------------------------->
   <div class="row py-5 border-bottom align-items-start">
     <div class="col-md-4">
       <h3 class="mb-0">Ideation & Design Process</h3>
@@ -180,142 +191,161 @@
       <img src="assets/agriInfoArchitect.png" class="img-fluid mt-3" alt="Agrilakal Information Architecture">
 
 
-      <!-- User Flow ------------------->
-      <p class="mt-4">
-        Every role enters through the same onboarding and shares global elements: search, language, notifications and
-        feedback states. After sign-in, each role lands on its own home, with navigation built around its main job.
-        </br></br>
-
-        Next, I mapped the end-to-end <span class="text-highlight">user flow</span>, from a farmer’s harvest to a
-        completed order, including key decision points involving farmers, buyers, the system, and distributors. This
-        helped establish two important rules: an order is only considered complete once both delivery and payment are
-        confirmed, and distributors cannot decline assigned jobs. Instead, they report any issues or exceptions so
-        dispatch can reassign the job.
-      </p>
-
-      <img src="assets/agriUserFlow.png" class="img-fluid mt-3" alt="Agrilakal User Flow">
-
-
-      <!-- Low-Fidelity Wireframes ---------------->
-      <p class="mt-4">
-        I then translated the key user journeys into <span class="text-highlight">low-fidelity wireframes</span> to
-        explore the initial layout, content structure, and navigation.
-      </p>
-
-      <img src="assets/agriLowfidelityWireframe.jpg" class="img-fluid mt-3" alt="Agrilakal Low-Fidelity Wireframe">
-
-
-
-      <!-- High-Fidelity Wireframes  ---------------->
-      <!-- FARMER -->
-      <div class="mt-4 mb-4">
-        <h5 class="mb-3">Farmer</h5>
-        <div class="device-gallery">
-          <img src="assets/farmer-mobile.png" class="device-mobile" alt="Farmer Mobile">
-          <img src="assets/farmer-tablet.png" class="device-tablet" alt="Farmer Tablet">
-        </div>
+      <!-- See More / See Less button ---------------------------------------------------------------------------------->
+      <div class="text-center mt-3">
+        <button class="expand-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#moreContent"
+          aria-expanded="false" aria-controls="moreContent">
+      
+          <span class="see-more-text">See more</span>
+          <span class="see-less-text">See less</span>
+          <span class="expand-icon"></span>
+      
+        </button>
       </div>
 
-      <!-- BUYER -->
-      <div class="mb-4">
-        <h5 class="mb-3">Buyer</h5>
-        <div class="device-gallery">
-          <img src="assets/buyer-mobile.png" class="device-mobile" alt="Buyer Mobile">
-          <img src="assets/buyer-tablet.png" class="device-tablet" alt="Buyer Tablet">
-          <img src="assets/buyer-desktop.png" class="device-desktop" alt="Buyer Desktop">
+    
+      <!-- Hidden content --------->
+     <div class="collapse mt-3" id="moreContent">
+
+        <!-- User Flow ------------------->
+        <p class="mt-4">
+          Every role enters through the same onboarding and shares global elements: search, language, notifications and
+          feedback states. After sign-in, each role lands on its own home, with navigation built around its main job.
+          </br></br>
+
+          Next, I mapped the end-to-end <span class="text-highlight">user flow</span>, from a farmer’s harvest to a
+          completed order, including key decision points involving farmers, buyers, the system, and distributors. This
+          helped establish two important rules: an order is only considered complete once both delivery and payment are
+          confirmed, and distributors cannot decline assigned jobs. Instead, they report any issues or exceptions so
+          dispatch can reassign the job.
+        </p>
+
+        <img src="assets/agriUserFlow.png" class="img-fluid mt-3" alt="Agrilakal User Flow">
+
+
+        <!-- Low-Fidelity Wireframes ---------------->
+        <p class="mt-4">
+          I then translated the key user journeys into <span class="text-highlight">low-fidelity wireframes</span> to
+          explore the initial layout, content structure, and navigation.
+        </p>
+
+        <img src="assets/agriLowfidelityWireframe.jpg" class="img-fluid mt-3" alt="Agrilakal Low-Fidelity Wireframe">
+
+
+
+        <!-- High-Fidelity Wireframes  ---------------->
+        <!-- FARMER -->
+        <div class="mt-4 mb-4">
+          <h5 class="mb-3">Farmer</h5>
+          <div class="device-gallery">
+            <img src="assets/farmer-mobile.png" class="device-mobile" alt="Farmer Mobile">
+            <img src="assets/farmer-tablet.png" class="device-tablet" alt="Farmer Tablet">
+          </div>
         </div>
+
+        <!-- BUYER -->
+        <div class="mb-4">
+          <h5 class="mb-3">Buyer</h5>
+          <div class="device-gallery">
+            <img src="assets/buyer-mobile.png" class="device-mobile" alt="Buyer Mobile">
+            <img src="assets/buyer-tablet.png" class="device-tablet" alt="Buyer Tablet">
+            <img src="assets/buyer-desktop.png" class="device-desktop" alt="Buyer Desktop">
+          </div>
+        </div>
+
+        <!-- DISTRIBUTOR -->
+        <div class="mb-4">
+          <h5 class="mb-3">Distributor</h5>
+          <div class="device-gallery">
+            <img src="assets/distributor-mobile.png" class="device-mobile" alt="Distributor Mobile">
+            <img src="assets/distributor-tablet.png" class="device-tablet" alt="Distributor Tablet">
+            <img src="assets/distributor-desktop.png" class="device-desktop" alt="Distributor Desktop">
+          </div>
+        </div>
+
+        <p class="mt-4">
+          This process helped me establish a clearer structure for the platform, ensuring that the screens and
+          interactions aligned with the overall user flow before moving into the final designs.
+        </p>
+
+        <p>
+          Detailed wireframes per user role are accessible via the following link:<br>
+          <a href="https://www.figma.com/design/NNEwFnzYE7W9sjQ9rq78TE/AgriLakal?node-id=1-5&t=cLHXzgwMSvkw33v5-1"
+            target="_blank">View Full Wireframes</a>
+        </p>
+
       </div>
 
-      <!-- DISTRIBUTOR -->
-      <div class="mb-4">
-        <h5 class="mb-3">Distributor</h5>
-        <div class="device-gallery">
-          <img src="assets/distributor-mobile.png" class="device-mobile" alt="Distributor Mobile">
-          <img src="assets/distributor-tablet.png" class="device-tablet" alt="Distributor Tablet">
-          <img src="assets/distributor-desktop.png" class="device-desktop" alt="Distributor Desktop">
-        </div>
+
+
+    </div>
+  </div>
+
+
+    <!-- Final Designs ------------>
+    <div class="row py-5  align-items-start">
+      <div class="col-md-4">
+        <h3 class="mb-0">Final Designs</h3>
+      </div>
+      <div class="col-md-8">
+        I designed 96 screens across four roles and three breakpoints, each shaped around one main job. Farmers can list a
+        harvest, answer an offer and see when they’ll be paid. Buyers can turn a need into a purchase request, accept an
+        offer and record payment. Distributors get jobs automatically, prove every pickup and drop-off, and can report a
+        problem without being penalised. DA and LGU officials can see prices, volumes and disputes across their area.
+      </div>
+    </div>
+
+    <!-- Full-width Image (outside the above columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <img src="assets/agriFinalDesign.png" class="img-fluid w-100" alt="Agrilakal Final Design">
+      </div>
+    </div>
+
+
+    <!-- Impact ---------------->
+    <div class="row py-5 border-top border-bottom align-items-start">
+      <div class="col-md-4">
+        <h3 class="mb-0">
+          Impact
+        </h3>
+      </div>
+      <div class="col-md-8">
+        This project produced a complete design package for Agrilakal: an information architecture, a user flow, wireframes,
+        a design guide, a log of key design decisions, and high-fidelity screens for every role. <span
+          class="text-highlight">The impact is still
+          expected rather than measured.</span> I see Agrilakal working best as a government-backed platform, run with the
+        Department
+        of Agriculture and LGUs. It could give smallholders a fairer route to market, publish reference prices people can
+        trust, and cut unsold and wasted harvests. It would also give officials live data on supply, prices and disputes, so
+        they can plan programs and respond faster. To show whether it works, I would track sell-through rate as the north
+        star, alongside time to first qualified offer, on-time fulfilment, payment completion and dispute incidence, with
+        targets set after a pilot baseline.
+      </div>
+    </div>
+
+
+    <!-- Next Steps ------->
+    <div class="row py-5 border-top border-bottom align-items-start">
+      <div class="col-md-4">
+        <h3 class="mb-0">
+          Next Steps
+        </h3>
+      </div>
+      <div class="col-md-8">
+        <span class="text-highlight">Every decision in Agrilakal is still a hypothesis until real users test it,</span> so my next steps would replace
+        assumptions with evidence. First, I'd interview farmers, buyers, distributors and DA/LGU staff in Eastern Visayas to
+        check the problem and roles I drew from secondary research. Then I'd run usability tests of the prototype on low-end
+        Android phones with weak signal. Alongside that, I'd have native speakers review the Waray and Cebuano copy, and
+        test contrast, text size and the icon-plus-label patterns with farmers who have low literacy or poor eyesight. From
+        there, I'd co-design with the DA and LGUs on reference prices, farmer verification and links to existing registries
+        like RSBSA. I'd also finish the missing states, such as offline sync, data-saver mode and SMS fallbacks, and align
+        data handling with the Data Privacy Act of 2012. Finally, I'd pilot the platform in one province and measure the
+        success metrics before scaling.
       </div>
 
-      <p class="mt-4">
-        This process helped me establish a clearer structure for the platform, ensuring that the screens and
-        interactions aligned with the overall user flow before moving into the final designs.
-      </p>
-
-      <p>
-        Detailed wireframes per user role are accessible via the following link:<br>
-        <a href="https://www.figma.com/design/NNEwFnzYE7W9sjQ9rq78TE/AgriLakal?node-id=1-5&t=cLHXzgwMSvkw33v5-1"
-          target="_blank">View Full Wireframes</a>
-      </p>
-
+      </div>
     </div>
-
-
-  </div>
-</div>
-
-
-  <!-- Final Designs ------------>
-  <div class="row py-5  align-items-start">
-    <div class="col-md-4">
-      <h3 class="mb-0">Final Designs</h3>
-    </div>
-    <div class="col-md-8">
-      I designed 96 screens across four roles and three breakpoints, each shaped around one main job. Farmers can list a
-      harvest, answer an offer and see when they’ll be paid. Buyers can turn a need into a purchase request, accept an
-      offer and record payment. Distributors get jobs automatically, prove every pickup and drop-off, and can report a
-      problem without being penalised. DA and LGU officials can see prices, volumes and disputes across their area.
-    </div>
-  </div>
-
-  <!-- Full-width Image (outside the above columns) -->
-  <div class="row mb-4">
-    <div class="col-12">
-      <img src="assets/agriFinalDesign.png" class="img-fluid w-100" alt="Agrilakal Final Design">
-    </div>
-  </div>
-
-
-  <!-- Impact ---------------->
-  <div class="row py-5 border-top border-bottom align-items-start">
-    <div class="col-md-4">
-      <h3 class="mb-0">
-        Impact
-      </h3>
-    </div>
-    <div class="col-md-8">
-      This project produced a complete design package for Agrilakal: an information architecture, a user flow, wireframes,
-      a design guide, a log of key design decisions, and high-fidelity screens for every role. <span
-        class="text-highlight">The impact is still
-        expected rather than measured.</span> I see Agrilakal working best as a government-backed platform, run with the
-      Department
-      of Agriculture and LGUs. It could give smallholders a fairer route to market, publish reference prices people can
-      trust, and cut unsold and wasted harvests. It would also give officials live data on supply, prices and disputes, so
-      they can plan programs and respond faster. To show whether it works, I would track sell-through rate as the north
-      star, alongside time to first qualified offer, on-time fulfilment, payment completion and dispute incidence, with
-      targets set after a pilot baseline.
-    </div>
-  </div>
-
-
-  <!-- Next Steps ------->
-  <div class="row py-5 border-top border-bottom align-items-start">
-    <div class="col-md-4">
-      <h3 class="mb-0">
-        Next Steps
-      </h3>
-    </div>
-    <div class="col-md-8">
-      <span class="text-highlight">Every decision in Agrilakal is still a hypothesis until real users test it,</span> so my next steps would replace
-      assumptions with evidence. First, I'd interview farmers, buyers, distributors and DA/LGU staff in Eastern Visayas to
-      check the problem and roles I drew from secondary research. Then I'd run usability tests of the prototype on low-end
-      Android phones with weak signal. Alongside that, I'd have native speakers review the Waray and Cebuano copy, and
-      test contrast, text size and the icon-plus-label patterns with farmers who have low literacy or poor eyesight. From
-      there, I'd co-design with the DA and LGUs on reference prices, farmer verification and links to existing registries
-      like RSBSA. I'd also finish the missing states, such as offline sync, data-saver mode and SMS fallbacks, and align
-      data handling with the Data Privacy Act of 2012. Finally, I'd pilot the platform in one province and measure the
-      success metrics before scaling.
-    </div>
-  </div>
 
 
 </div>
