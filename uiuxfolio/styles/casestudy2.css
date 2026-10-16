@@ -48,6 +48,14 @@ p {
   margin-top: 1rem;
 }
 
+.userflow {
+  display: block;
+  width: 1400px;
+  max-width: none;
+  height: auto;
+}
+
+
 
 /* Initially show "See more" */
 .see-less-text {
