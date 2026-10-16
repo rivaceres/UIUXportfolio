@@ -12,39 +12,89 @@ fetch('shared/footer.html')
     document.getElementById('footer-container').innerHTML = data;
   });
 
+// Skeleton layout shown while a case study loads (mirrors the shared case study structure)
+const CASE_STUDY_SKELETON = `
+<span class="visually-hidden" role="status">Loading case study…</span>
+<div class="container" aria-hidden="true">
+  <div class="row align-items-center mb-5">
+    <div class="col-md-5">
+      <div class="skeleton skeleton-btn mb-3"></div>
+      <div class="skeleton skeleton-title mt-4"></div>
+      <div class="skeleton skeleton-text mt-5"></div>
+      <div class="skeleton skeleton-text"></div>
+      <div class="skeleton skeleton-text w-75 mb-5"></div>
+    </div>
+    <div class="col-md-7"><div class="skeleton skeleton-hero"></div></div>
+  </div>
+  <div class="row text-center py-5">
+    ${`<div class="col">
+      <div class="skeleton skeleton-icon mx-auto mb-2"></div>
+      <div class="skeleton skeleton-text w-50 mx-auto"></div>
+      <div class="skeleton skeleton-text w-75 mx-auto"></div>
+    </div>`.repeat(4)}
+  </div>
+  ${`<div class="row py-5 border-top">
+    <div class="col-md-4"><div class="skeleton skeleton-heading mb-3"></div></div>
+    <div class="col-md-8">
+      <div class="skeleton skeleton-text"></div>
+      <div class="skeleton skeleton-text"></div>
+      <div class="skeleton skeleton-text w-50"></div>
+    </div>
+  </div>`.repeat(3)}
+</div>`;
+
+// Shimmer each image until it finishes loading
+function skeletonImages(root) {
+  root.querySelectorAll("img").forEach(img => {
+    if (img.complete) return;
+    img.classList.add("skeleton");
+    const done = () => img.classList.remove("skeleton");
+    img.addEventListener("load", done, { once: true });
+    img.addEventListener("error", done, { once: true });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".case-study-card");
   const mainContent = document.getElementById("main-content");
+
+  skeletonImages(mainContent);
 
   cards.forEach(card => {
     card.addEventListener("click", () => {
       const file = card.getAttribute("data-file");
       const cssFile = `styles/${getCssFileName(file)}`;
 
-      fetch(file)
-        .then(response => {
-          if (!response.ok) throw new Error("Network response was not ok.");
-          return response.text();
-        })
-        .then(html => {
+      mainContent.innerHTML = CASE_STUDY_SKELETON;
+      mainContent.setAttribute("aria-busy", "true");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      // Remove previously injected case study styles
+      document.querySelectorAll("[data-case-style]").forEach(el => el.remove());
+
+      // Inject CSS now so the page isn't shown unstyled; skeleton stays until it loads
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = cssFile;
+      link.setAttribute("data-case-style", "true");
+      const cssLoaded = new Promise(resolve => { link.onload = link.onerror = resolve; });
+      document.head.appendChild(link);
+
+      const htmlLoaded = fetch(file).then(response => {
+        if (!response.ok) throw new Error("Network response was not ok.");
+        return response.text();
+      });
+
+      Promise.all([htmlLoaded, cssLoaded])
+        .then(([html]) => {
           mainContent.innerHTML = html;
-
-          // Remove previously injected case study styles
-          document.querySelectorAll("[data-case-style]").forEach(el => el.remove());
-
-          // Inject new CSS for the loaded case study
-          const link = document.createElement("link");
-          link.rel = "stylesheet";
-          link.href = cssFile;
-          link.setAttribute("data-case-style", "true");
-          document.head.appendChild(link);
-
-          window.scrollTo({ top: 0, behavior: "smooth" });
+          skeletonImages(mainContent);
         })
         .catch(error => {
           mainContent.innerHTML = "<p>Error loading content. Please try again.</p>";
           console.error("Error loading file:", error);
-        });
+        })
+        .finally(() => mainContent.removeAttribute("aria-busy"));
     });
   });
 });
