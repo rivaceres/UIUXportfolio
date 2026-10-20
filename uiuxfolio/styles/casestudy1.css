@@ -61,3 +61,17 @@ p {
   color: #EE9322;
 }
 
+
+/* Two-column section (text + image) */
+.section-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.section-image {
+  width: 100%;
+  border-radius: 12px;
+}
