@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainContent = document.getElementById("main-content");
 
   skeletonImages(mainContent);
+  revealOnScroll(mainContent);
 
   cards.forEach(card => {
     card.addEventListener("click", () => {
@@ -89,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(([html]) => {
           mainContent.innerHTML = html;
           skeletonImages(mainContent);
+          revealOnScroll(mainContent);
         })
         .catch(error => {
           mainContent.innerHTML = "<p>Error loading content. Please try again.</p>";
@@ -98,6 +100,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// Content rows fade up the first time they scroll into view
+function revealOnScroll(root) {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("in-view");
+      observer.unobserve(entry.target);
+    });
+  }, { rootMargin: "0px 0px -15% 0px" });
+
+  // .content-section rows: case studies; section > .row: home page card grid
+  root.querySelectorAll(".content-section > .row, section > .row").forEach(row => {
+    row.classList.add("reveal");
+    observer.observe(row);
+  });
+}
 
 // Helper: maps HTML filename to CSS filename
 function getCssFileName(htmlFilePath) {
