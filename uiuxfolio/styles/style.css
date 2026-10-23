@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Sora:wght@300;700&display=swap');
 
 .navbar-brand,
 .navbar-brand:hover,
 .navbar-brand:focus {
-  color: #EE9322;
+  color: #212529;
 }
 
 
@@ -30,7 +30,18 @@ h2{
 }
 
 .navbar-brand {
+  font-family: 'Sora', sans-serif;
   font-size: 1.5rem;
+}
+
+.navbar-brand .brand-accent {
+  color: #EE9322;
+  font-weight: 700;
+}
+
+.navbar-brand .brand-light {
+  font-weight: 300;
+  font-style: italic;
 }
 
 .nav-link {
