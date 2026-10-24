@@ -12,13 +12,13 @@
 }
 
 h1{
-  font-family: 'Lora', serif;
+  font-family: 'Playfair Display', serif;
   font-weight: bold;
   /* color: #EE9322; */
 }
 
 h2{
-  font-family: 'Georgia', serif;
+  font-family: 'Playfair Display', serif;
   font-style: italic;
   font-weight: 500; /* lighter than the bold h1 */
   color: #EE9322;
