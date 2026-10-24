@@ -163,6 +163,22 @@ p {
 }
 
 
+.btn-outline-secondary {
+  border-color: #EE9322;
+  color: #EE9322;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #EE9322;
+  color: #fff;
+  border-color: #EE9322;
+}
+
+
+
+
+
+
 
 /* Low fidelity Wireframe - UX Designs */
 
