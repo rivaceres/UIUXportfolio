@@ -19,16 +19,16 @@ body {
 }
 
 
-h1, h2 {
+h1{
  font-family: 'Lora', serif;
   /* font-weight: bold; */
   /* color: #EE9322; */
 }
 
 h2{
-  /* font-family: 'Lora', serif; */
   font-style: italic;
-  font-weight: 500; /* lighter than the bold h1 */
+  font-weight: 500;
+  color: #EE9322;
 }
 
 .navbar-brand {
