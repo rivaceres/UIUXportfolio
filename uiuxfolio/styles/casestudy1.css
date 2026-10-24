@@ -79,6 +79,19 @@ p {
 }
 
 
+.btn-outline-secondary {
+  border-color: #EE9322;
+  color: #EE9322;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #EE9322;
+  color: #fff;
+  border-color: #EE9322;
+}
+
+
+
 /* Two-column section (text + image) */
 .section-eyebrow {
   text-transform: uppercase;
