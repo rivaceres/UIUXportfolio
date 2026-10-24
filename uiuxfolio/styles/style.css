@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Sora:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600;700&family=Sora:wght@300;700&display=swap');
 
 .navbar-brand,
 .navbar-brand:hover,
@@ -18,15 +18,17 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+
 h1, h2 {
-  font-family: 'Playfair Display', serif;
-  
-  font-weight: bold;
+ font-family: 'Lora', serif;
+  /* font-weight: bold; */
   /* color: #EE9322; */
 }
 
 h2{
+  /* font-family: 'Lora', serif; */
   font-style: italic;
+  font-weight: 500; /* lighter than the bold h1 */
 }
 
 .navbar-brand {
