@@ -11,15 +11,16 @@
   padding: 1rem;
 }
 
-h1, h2 {
-  font-family: 'Playfair Display', serif;
-  
+h1{
+  font-family: 'Lora', serif;
   font-weight: bold;
   /* color: #EE9322; */
 }
 
 h2{
+  font-family: 'Georgia', serif;
   font-style: italic;
+  font-weight: 500; /* lighter than the bold h1 */
   color: #EE9322;
 }
 
@@ -77,6 +78,19 @@ p {
 .text-highlight{
   color: #EE9322;
 }
+
+
+.btn-outline-secondary {
+  border-color: #EE9322;
+  color: #EE9322;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #EE9322;
+  color: #fff;
+  border-color: #EE9322;
+}
+
 
 
 /* Two-column section (text + image) */
