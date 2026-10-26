@@ -1,5 +1,7 @@
 .case-image {
+  width: 100%;
   max-width: 800px;
+  height: auto;
 }
 
 .small-info-row img {
@@ -12,7 +14,7 @@
 }
 
 h1, h2 {
-  font-family: 'Lora', serif;
+  font-family: 'Playfair Display', serif;
   
   font-weight: bold;
   /* color: #EE9322; */
@@ -58,7 +60,7 @@ p {
   border-color: #EE9322;
 }
 
-.text-highlight{
+.text-highlight, .user-icon{
   color: #EE9322;
 }
 
@@ -74,5 +76,98 @@ p {
 
 .section-image {
   width: 100%;
-  border-radius: 12px;
+}
+
+/* Mid-fidelity: desktop, tablet and mobile side by side, all at the same scale */
+.device-gallery {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 900px;
+}
+
+/* label on top, screen below */
+.device-gallery > div {
+  min-width: 0;
+}
+
+.device-gallery img {
+  min-width: 0;
+  height: auto;
+}
+
+/* flex ratios match the screens' real widths (1440 / 834 / 390px) */
+.device-desktop { flex: 1440 1 0; }
+.device-tablet { flex: 834 1 0; }
+.device-mobile { flex: 390 1 0; }
+
+/* See more / See less toggle (same as casestudy2.css) */
+/* Initially show "See more" */
+.see-less-text {
+  display: none;
+}
+
+/* When expanded */
+.expand-toggle[aria-expanded="true"] .see-more-text {
+  display: none;
+}
+
+.expand-toggle[aria-expanded="true"] .see-less-text {
+  display: inline;
+}
+
+/* Expandable text button */
+.expand-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.expand-toggle:hover {
+  color: #EE9322;
+}
+
+.expand-toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+
+/* Chevron indicator */
+.expand-icon {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  margin-right: 4px;
+  position: relative;
+  top: -2px;
+}
+
+/* Expanded state */
+.expand-toggle[aria-expanded="true"] .expand-icon {
+  transform: rotate(225deg);
+}
+
+
+/* Secondary button: orange outline (same as casestudy2.css) */
+.btn-outline-secondary {
+  border-color: #EE9322;
+  color: #EE9322;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #EE9322;
+  color: #fff;
+  border-color: #EE9322;
 }

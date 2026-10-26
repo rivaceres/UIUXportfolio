@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600;700&family=Sora:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 .navbar-brand,
 .navbar-brand:hover,
 .navbar-brand:focus {
-  color: #212529;
+  color: #EE9322;
 }
 
 
@@ -20,31 +20,27 @@ body {
 
 
 h1{
- font-family: 'Lora', serif;
-  /* font-weight: bold; */
+ font-family: 'Playfair Display', serif;
+   /* font-style: italic; */
+  font-weight: bold;
   /* color: #EE9322; */
 }
 
 h2{
+  font-family: 'Playfair Display', serif;
   font-style: italic;
-  font-weight: 500;
+    font-weight: semi-bold;
+  /* font-weight: 500; */
   color: #EE9322;
 }
 
 .navbar-brand {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
-}
-
-.navbar-brand .brand-accent {
-  color: #EE9322;
   font-weight: 700;
 }
 
-.navbar-brand .brand-light {
-  font-weight: 300;
-  font-style: italic;
-}
+
 
 .nav-link {
   font-weight: 500;
@@ -146,4 +142,5 @@ div.skeleton { border-radius: 4px; }
 .reveal.in-view > :nth-child(3) { animation-delay: 0.2s; }
 /* Home page order: heading, then subheading, then all cards together */
 section > .row.reveal.in-view > * { animation-delay: 0.5s; }
+section > .row.reveal.in-view ~ .row.in-view > * { animation-delay: 0.8s; } /* later card rows follow the first */
 #main-content > .hero-text > :nth-child(2) { animation-delay: 0.25s; }
