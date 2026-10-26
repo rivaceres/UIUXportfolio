@@ -76,5 +76,22 @@ p {
 
 .section-image {
   width: 100%;
-  border-radius: 12px;
 }
+
+/* Mid-fidelity: desktop, tablet and mobile side by side, all at the same scale */
+.device-gallery {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 900px;
+}
+
+.device-gallery img {
+  min-width: 0;
+  height: auto;
+}
+
+/* flex ratios match the screens' real widths (1440 / 834 / 390px) */
+.device-desktop { flex: 1440 1 0; }
+.device-tablet { flex: 834 1 0; }
+.device-mobile { flex: 390 1 0; }
