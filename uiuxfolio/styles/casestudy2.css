@@ -186,6 +186,11 @@ p {
   overflow-x: auto;
 }
 
+/* label on top, screen below */
+.device-gallery > div {
+  flex-shrink: 0;
+}
+
 .device-gallery img {
   display: block;
   height: auto;
