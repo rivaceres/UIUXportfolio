@@ -107,8 +107,14 @@ function revealOnScroll(root) {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      entry.target.classList.add("in-view");
-      observer.unobserve(entry.target);
+      // Home page card rows reveal together, so later rows aren't left hidden
+      const rows = entry.target.matches("section > .row")
+        ? entry.target.parentElement.querySelectorAll(":scope > .row")
+        : [entry.target];
+      rows.forEach(row => {
+        row.classList.add("in-view");
+        observer.unobserve(row);
+      });
     });
   }, { rootMargin: "0px 0px -15% 0px" });
 

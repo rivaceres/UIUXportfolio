@@ -142,4 +142,5 @@ div.skeleton { border-radius: 4px; }
 .reveal.in-view > :nth-child(3) { animation-delay: 0.2s; }
 /* Home page order: heading, then subheading, then all cards together */
 section > .row.reveal.in-view > * { animation-delay: 0.5s; }
+section > .row.reveal.in-view ~ .row.in-view > * { animation-delay: 0.8s; } /* later card rows follow the first */
 #main-content > .hero-text > :nth-child(2) { animation-delay: 0.25s; }
