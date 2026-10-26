@@ -159,3 +159,15 @@ p {
   transform: rotate(225deg);
 }
 
+
+/* Secondary button: orange outline (same as casestudy2.css) */
+.btn-outline-secondary {
+  border-color: #EE9322;
+  color: #EE9322;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #EE9322;
+  color: #fff;
+  border-color: #EE9322;
+}
